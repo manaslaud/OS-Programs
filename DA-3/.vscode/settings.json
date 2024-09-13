@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.huff": "huff",
+        "Q2.C": "cpp"
+    }
+}
