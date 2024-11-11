@@ -41,6 +41,7 @@ int lru(int pages[], int n, int frameCount) {
 
         if (index == -1) {  // Page fault
             int lruIndex = 0;
+            //finding least of all elements (each element represents an idx of pages[]), i.e page with lowest access time (lowest i value)
             for (int j = 1; j < frameCount; j++) {
                 if (lastUsed[j] < lastUsed[lruIndex]) {
                     lruIndex = j;
@@ -49,7 +50,7 @@ int lru(int pages[], int n, int frameCount) {
             frame[lruIndex] = pages[i];
             pageFaults++;
         }
-
+    //lastUsed @ith represents lastUsed time for ith element of frame 
         lastUsed[findIndex(frame, frameCount, pages[i])] = i;
     }
     return pageFaults;
