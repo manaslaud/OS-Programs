@@ -80,25 +80,25 @@ echo ${LIST[@]} # TO GET ALL ITEMS SPACE SEPERATED, @ CAN BE 0 TO N-1
 
 
 #PRIME NO 
-# #!/bin/bash
+#!/bin/bash
 
-# # Prompt the user to enter a number
-# echo "Enter a number:"
-# read num
+# Prompt the user to enter a number
+echo "Enter a number:"
+read num
 
-# # Check if the number is less than 2
-# if [ "$num" -lt 2 ]; then
-#     echo "$num is not a prime number."
-#     exit 0
-# fi
+# Check if the number is less than 2
+if [ "$num" -lt 2 ]; then
+    echo "$num is not a prime number."
+    exit 0
+fi
 
-# # Check for factors from 2 to the square root of the number
-# for (( i=2; i*i<=num; i++ )); do
-#     if [ $((num % i)) -eq 0 ]; then
-#         echo "$num is not a prime number."
-#         exit 0
-#     fi
-# done
+# Check for factors from 2 to the square root of the number
+for (( i=2; i*i<=num; i++ )); do
+    if [ $((num % i)) -eq 0 ]; then
+        echo "$num is not a prime number."
+        exit 0
+    fi
+done
 
 # # If no factors were found, it is prime
 # echo "$num is a prime number."
@@ -123,25 +123,25 @@ echo ${LIST[@]} # TO GET ALL ITEMS SPACE SEPERATED, @ CAN BE 0 TO N-1
 
 
 #FACTORIAL
-# #!/bin/bash
+#!/bin/bash
 
-# # Prompt the user to enter a number
-# echo "Enter a number:"
-# read num
+# Prompt the user to enter a number
+echo "Enter a number:"
+read num
 
-# # Initialize factorial result
-# factorial=1
+# Initialize factorial result
+factorial=1
 
-# # Check if the number is negative
-# if [ "$num" -lt 0 ]; then
-#     echo "Factorial is not defined for negative numbers."
-#     exit 1
-# fi
+# Check if the number is negative
+if [ "$num" -lt 0 ]; then
+    echo "Factorial is not defined for negative numbers."
+    exit 1
+fi
 
-# # Calculate the factorial
-# for (( i=1; i<=num; i++ )); do
-#     factorial=$((factorial * i))
-# done
+# Calculate the factorial
+for (( i=1; i<=num; i++ )); do
+    factorial=$((factorial * i))
+done
 
-# # Display the result
-# echo "The factorial of $num is: $factorial"
+# Display the result
+echo "The factorial of $num is: $factorial"
