@@ -51,7 +51,6 @@ bool is_safe() {
                         break;
                     }
                 }
-
                 if (j == RESOURCES) { // If all needs can be satisfied
                     for (int k = 0; k < RESOURCES; k++) {
                         work[k] += allocation[i][k];  // Release resources
@@ -62,7 +61,7 @@ bool is_safe() {
                 }
             }
         }
-
+        
         if (!found) {
             printf("System is not in a safe state.\n");
             return false;
